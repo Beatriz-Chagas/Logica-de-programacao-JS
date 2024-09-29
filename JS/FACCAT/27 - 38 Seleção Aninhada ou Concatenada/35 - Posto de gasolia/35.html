@@ -4,22 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RESULTADO DO JOGO</title>
+    <title>POSTO DE GASOLINA</title>
 </head>
 <body>
-  <h1>Ordem crescente dentre três</h1>
+  <h1>Posto de gasolina</h1>
   <form class="formulario">
 
-    <label for="time1" >Insira o nome do time:</label> <br>
-    <input type="text" class="time1" value=""><br><br>
-    <label for="num1">Insira a quantia de gols desse time na partida:</label><br>
-    <input type="number" class="num1" value=""><br><br>
-
-    <label for="time2">Insira outro time:</label> <br>
-    <input type="text" class="time2" value=""><br><br>
-    <label for="num2">Insira a quantia de gols desse time na partida:</label><br>
-    <input type="number" class="num2" value=""><br><br>
-
+    <label for="tipo">Qual o tipo de combustível?:</label>
+    <input type="radio" class="tipo" name="tipo" value="A"> Alcool
+    <input type="radio" class="tipo" name="tipo" value="G"> Gasolina<br><br>
+    
+    <label for="litros">Quantos litros de combustível?:</label>
+    <input type="number" class="litros"><br>
     <input type="submit" value="Calcular">
   </form>
 

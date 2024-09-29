@@ -1,7 +1,13 @@
 // Disciplina  : [L�gica de Programa��o com JavaScript]
 // Professor   : Jailson Santos
-// Descri��o  :  Ler o nome de 2 times e o número de gols marcados na partida (para cada time). Escrever o nome
-// do vencedor. Caso não haja vencedor deverá ser impressa a palavra EMPATE. 
+// Descri��o  :  Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+// até 20 litros, desconto de 3% por litro Álcool
+// acima de 20 litros, desconto de 5% por litro
+// até 20 litros, desconto de 4% por litro Gasolina
+// acima de 20 litros, desconto de 6% por litro
+// Escreva um algoritmo que leia o número de litros vendidos e o tipo de combustível (codificado da
+// seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se
+// que o preço do litro da gasolina é R$ 3,30 e o preço do litro do álcool é R$ 2,90. 
 // Autor(a)    : Beatriz Chagas
 
 const form = document.querySelector('.formulario');
@@ -11,18 +17,20 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   console.log('Evento submit disparado!');
 
-  const a = parseFloat(document.querySelector('.num1').value);
-  const b = parseFloat(document.querySelector('.num2').value);
-  const time1 = (document.querySelector('.time1').value);
-  const time2 = (document.querySelector('.time2').value);
-  let diferenca = 0;
- if (a > b) {
-  diferenca = a - b;
-  result.innerText = `O time ${time1} venceu por ${diferenca} gols.`
-  } else if (b > a) {
-    diferenca = b - a;
-    result.innerText = `O time ${time2} venceu por ${diferenca}`
-      } else {
-      result.innerText = `Os times empataram com ${a} gols para ambos.`;
- }
+  const tipo = document.querySelector('input[name="tipo"]:checked').value;
+  const litro = (document.querySelector('.litros').value);
+  let valor;
+if (litro <= 20  && tipo === 'A') {
+   valor = (litro * 2.90) * 0.97;
+} else if (litro > 20 && tipo === 'A') {
+  valor = (litro * 2.90) * 0.95;
+} else if(litro <= 20 && tipo === 'G') {
+  valor = (litro * 3.30) * 0.96;
+} else if (litro > 20 && tipo === 'G') {
+  valor = (litro * 3.30) * 0.94;
+} else {
+  result.innerText =  'Erro ao calcular o valor';
+};
+
+result.innerText = `O valor a ser pago é R$ ${valor.toFixed(2)}`
 });

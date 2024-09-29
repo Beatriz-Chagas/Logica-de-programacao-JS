@@ -1,9 +1,22 @@
 // Disciplina  : [L�gica de Programa��o com JavaScript]
 // Professor   : Jailson Santos
-// Descri��o  :   Ler dois valores e imprimir uma das três mensagens a seguir:
-// ‘Números iguais’, caso os números sejam iguais
-// ‘Primeiro é maior’, caso o primeiro seja maior que o segundo;
-// ‘Segundo maior’, caso o segundo seja maior que o primeiro. 
+// Descri��o  :  Seja o seguinte algoritmo:
+// início
+// ler x
+// ler y
+// z  (x*y) + 5
+// se z <= 0 então
+// resposta  ‘A’
+// senão
+// se z <= 100 então
+// resposta  ‘B’
+// senão
+// resposta  ‘C’
+//  fim_se
+//  fim_se
+// escrever z, resposta
+// fim
+// Faça um teste de mesa e complete o quadro a seguir para os seguintes valores:
 // Autor(a)    : Beatriz Chagas
 
 const form = document.querySelector('.formulario');
