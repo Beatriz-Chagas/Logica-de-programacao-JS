@@ -19,22 +19,27 @@ form.addEventListener('submit', (e) => {
   const mulher2 = parseFloat(document.querySelector('.num2').value);
   const homem1 = parseFloat(document.querySelector('.num3').value);
   const homem2 = parseFloat(document.querySelector('.num4').value);
-
-  if (homem1 < homem2) {
-    let temp = homem1;
-    homem1 = homem2;
-    homem2 = temp;
-  };
+  
+  let homemVelho, homemNovo, mulherNova, mulherVelha;
+  
+  if (homem1 > homem2) {
+    homemVelho = homem1;
+    homemNovo = homem2;
+  } else {
+    homemVelho = homem2;
+    homemNovo = homem1;
+  }
   
   if (mulher1 < mulher2) {
-    let temp = mulher1;
-    mulher1 = mulher2;
-    mulher2 = temp;
-  };
-
-  const soma = homem1 + mulher2;
-  const produto = homem2 * mulher1;
-
-  result.innerText = ` A soma das idades do homem mais velho tendo ${homem1} com a mulher mais nova tendo ${mulher2} é ${soma} \n O produto das idades do homem mais novo tendo ${homem2} com a mulher mais velha tendo ${mulher1} é ${produto}`
-
+    mulherNova = mulher1;
+    mulherVelha = mulher2;
+  } else {
+    mulherNova = mulher2;
+    mulherVelha = mulher1;
+  }
+  
+  const soma = homemVelho + mulherNova;
+  const produto = homemNovo * mulherVelha;
+  
+  result.innerText = `A soma das idades do homem mais velho tendo ${homemVelho} com a mulher mais nova tendo ${mulherNova} é ${soma} \n O produto das idades do homem mais novo tendo ${homemNovo} com a mulher mais velha tendo ${mulherVelha} é ${produto}`;
 });
