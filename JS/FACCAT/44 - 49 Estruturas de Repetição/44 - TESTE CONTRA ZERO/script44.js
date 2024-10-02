@@ -7,7 +7,6 @@
 
 const form = document.querySelector('.formulario');
 const result = document.querySelector('.result');
-const senhaInput = document.querySelector('.num2');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
