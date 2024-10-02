@@ -7,6 +7,7 @@
 
 const form = document.querySelector('.formulario');
 const result = document.querySelector('.result');
+const senhaInput = document.querySelector('.num2');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -19,10 +20,9 @@ form.addEventListener('submit', (e) => {
   if (divisor === 0) {
     do {
       alert('O valor do divisor não pode ser zero!');
-      divisor = prompt(parseFloat('Insira um novo valor para o divisor:').value)
-      
+      divisor = prompt(parseFloat('Insira um novo valor para o divisor:'));
     } while (divisor === 0);
-  }
+  };
 
   resultado = numero / divisor;
   result.innerText = `O resultado da divisão é: ${resultado}`;
