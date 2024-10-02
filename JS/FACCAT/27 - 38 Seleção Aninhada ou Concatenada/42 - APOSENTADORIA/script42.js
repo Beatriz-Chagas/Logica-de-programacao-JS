@@ -1,9 +1,13 @@
 // Disciplina  : [L�gica de Programa��o com JavaScript]
 // Professor   : Jailson Santos
-// Descri��o  : 42) Faça um algoritmo para ler um número que é um código de usuário. Caso este código seja
-// diferente de um código armazenado internamente no algoritmo (igual a 1234) deve ser apresentada a
-// mensagem ‘Usuário inválido!’. Caso o Código seja correto, deve ser lido outro valor que é a senha. Se
-// esta senha estiver incorreta (a certa é 9999) deve ser mostrada a mensagem ‘senha incorreta’. Caso a
+// Descri��o  : 42)Uma empresa quer verificar se um empregado está qualificado para a aposentadoria ou não. Para
+// estar em condições, um dos seguintes requisitos deve ser satisfeito:
+// - Ter no mínimo 65 anos de idade.
+// - Ter trabalhado no mínimo 30 anos.
+// - Ter no mínimo 60 anos e ter trabalhado no mínimo 25 anos.
+// Com base nas informações acima, faça um algoritmo que leia: o número do empregado (código), o ano
+// de seu nascimento e o ano de seu ingresso na empresa. O programa deverá escrever a idade e o tempo
+// de trabalho do empregado e a mensagem 'Requerer aposentadoria' ou 'Não requerer'.
 // senha esteja correta, deve ser mostrada a mensagem ‘Acesso permitido’.
 // Autor(a)    : Beatriz Chagas
 
@@ -15,22 +19,14 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   console.log('Evento submit disparado!');
 
-  const codigo = parseFloat(document.querySelector('.num1').value);
+  const idade = parseFloat(document.querySelector('.num1').value);
+  const tempoTrabalho = parseFloat(document.querySelector('.num2').value);
 
-  if (codigo === 1234) {
-    result.innerText = `O usuário está correto!`;
-    senhaInput.style.display = 'block';
+  if  (idade >= 65 || tempoTrabalho >= 30 || (idade >= 60 &&  tempoTrabalho >= 25)) {
+    result.innerHTML = 'Requerer aposentadoria';
   } else {
-    result.innerText = `Usuário inválido!`;
+    result.innerHTML = 'Não requerer aposentadoria';
   }
+
 });
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const senha = parseFloat(senhaInput.value);
-  if (senha === 9999) {
-    result.innerText = `Acesso permitido!`;
-  } else {
-    result.innerText = `Senha ou usuário incorretos!`;
-  }
-});
