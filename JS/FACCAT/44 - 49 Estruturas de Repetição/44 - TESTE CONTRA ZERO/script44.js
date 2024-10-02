@@ -1,11 +1,9 @@
 // Disciplina  : [L�gica de Programa��o com JavaScript]
 // Professor   : Jailson Santos
-// Descri��o  : 44) Faça um algoritmo para ler um número que é um código de usuário. Caso este código seja
-// diferente de um código armazenado internamente no algoritmo (igual a 1234) deve ser apresentada a
-// mensagem ‘Usuário inválido!’. Caso o Código seja correto, deve ser lido outro valor que é a senha. Se
-// esta senha estiver incorreta (a certa é 9999) deve ser mostrada a mensagem ‘senha incorreta’. Caso a
-// senha esteja correta, deve ser mostrada a mensagem ‘Acesso permitido’.
-// Autor(a)    : Beatriz Chagas
+// Descri��o : 44) Escreva um algoritmo para ler 2 valores e se o segundo valor informado for ZERO, deve ser lido
+// um novo valor, ou seja, para o segundo valor não pode ser aceito o valor zero e imprimir o resultado
+// da divisão do primeiro valor lido pelo segundo valor lido. (utilizar a estrutura REPITA).
+// Autor(a) : Beatriz Chagas
 
 const form = document.querySelector('.formulario');
 const result = document.querySelector('.result');
@@ -15,22 +13,18 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   console.log('Evento submit disparado!');
 
-  const codigo = parseFloat(document.querySelector('.num1').value);
+  const numero = parseFloat(document.querySelector('.num1').value);
+  let divisor = parseFloat(document.querySelector('.num2').value);
+  let resultado;
 
-  if (codigo === 1234) {
-    result.innerText = `O usuário está correto!`;
-    senhaInput.style.display = 'block';
-  } else {
-    result.innerText = `Usuário inválido!`;
+  if (divisor === 0) {
+    do {
+      alert('O valor do divisor não pode ser zero!');
+      divisor = prompt(parseFloat('Insira um novo valor para o divisor:').value)
+      
+    } while (divisor === 0);
   }
-});
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const senha = parseFloat(senhaInput.value);
-  if (senha === 9999) {
-    result.innerText = `Acesso permitido!`;
-  } else {
-    result.innerText = `Senha ou usuário incorretos!`;
-  }
+  resultado = numero / divisor;
+  result.innerText = `O resultado da divisão é: ${resultado}`;
 });
