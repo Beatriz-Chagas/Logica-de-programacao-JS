@@ -8,7 +8,7 @@
 - 12 ao 13 :white_check_mark:
 - 14 ao 26 :white_check_mark:
 - 27 ao 38 :white_check_mark:
-- 40 ao 43
+- 40 ao 43 :white_check_mark:
 - 44 ao 49 
  ### Manzano
 - Lista 1
