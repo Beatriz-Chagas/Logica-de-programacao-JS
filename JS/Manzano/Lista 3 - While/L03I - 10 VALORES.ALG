@@ -1,30 +1,29 @@
 Algoritmo "L03I - 10 VALORES"
-// Disciplina  : [Linguagem e Lógica de Programação]
+// Disciplina  : [Linguagem e Lï¿½gica de Programaï¿½ï¿½o]
 // Professor   : Jailson Santos
-// Descrição   :   Elaborar um programa que efetue a leitura de 10 valores numéricos e apresente no final o total do
-// somatório e a média aritmética dos valores lidos.
+// Descriï¿½ï¿½o   :   Elaborar um programa que efetue a leitura de 10 valores numï¿½ricos e apresente no final o total do
+// somatï¿½rio e a mï¿½dia aritmï¿½tica dos valores lidos.
 // Autor(a)    : Beatriz Chagas
 // Data atual  : 09/09/2024
 
 var
    soma, numero, media, contador: real
-Inicio
-   enquanto contador <11 faca
-   escreval ("------------------------------")
-   escreval (" 10 VALORES")
-   escreval ("------------------------------")
 
-   escreval ("Insira 10 valores para receber a soma e média de todos eles: ")
+   while contador <11 {
+   console.log ("------------------------------")
+   console.log (" 10 VALORES")
+   console.log ("------------------------------")
+
+   console.log ("Insira 10 valores para receber a soma e mï¿½dia de todos eles: ")
    leia(numero)
-   escreval ("-------------------------------------------------------------")
+   console.log ("-------------------------------------------------------------")
    limpatela
-   soma <- soma + numero
-   media <- soma / 10
+   soma = soma + numero
+   media = soma / 10
    
-   contador <- contador + 1
-   fimenquanto
+   contador = contador + 1
+   }
    
-   escreval ("A soma dos 10 valores é: ", soma)
-   escreval ("A média aritmética dos 10 valores é: ", media)
+   console.log ("A soma dos 10 valores ï¿½: ", soma)
+   console.log ("A mï¿½dia aritmï¿½tica dos 10 valores ï¿½: ", media)
 
-Fimalgoritmo

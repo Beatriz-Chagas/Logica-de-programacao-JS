@@ -1,6 +1,6 @@
 // Disciplina  : [L�gica de Programa��o com JavaScript]
 // Professor   : Jailson Santos
-// Descri��o  : 45)Reescreva o exercício anterior utilizando a estrutura ENQUANTO. 
+// Descri��o  : 45)Reescreva o exercício anterior utilizando a estrutura while. 
 // Autor(a)    : Beatriz Chagas
 
 const form = document.querySelector('.formulario');

@@ -1,7 +1,7 @@
 // Disciplina  : [L�gica de Programa��o com JavaScript]
 // Professor   : Jailson Santos
 // Descri��o  : 43)43) Seja o seguinte algoritmo:
-// inicio
+// 
 // ler a, b, c
 // se (a < b+c) e (b <a+c) e (c <a+b) então
 // se (a=b) e (b=c) então

@@ -1,33 +1,32 @@
 Algoritmo "L03K - AREA TOTAL DA RESIDENCIA"
-// Disciplina  : [Linguagem e Lógica de Programação]
+// Disciplina  : [Linguagem e Lï¿½gica de Programaï¿½ï¿½o]
 // Professor   : Jailson Santos
-// Descrição   : Elaborar um programa que possibilite calcular a área total de uma residência (sala, cozinha, banheiro, quartos, área de serviço, quintal, garagem, etc.). O programa deve solicitar a entrada do nome, a largura e o comprimento de um determinado cômodo. Em seguida, deve apresentar a área do cômodo lido e também uma mensagem solicitando do usuário a confirmação de continuar calculando novos cômodos. Caso o usuário responda “NAO”, o programa deve apresentar o valor total acumulado da área residencial.
+// Descriï¿½ï¿½o   : Elaborar um programa que possibilite calcular a ï¿½rea total de uma residï¿½ncia (sala, cozinha, banheiro, quartos, ï¿½rea de serviï¿½o, quintal, garagem, etc.). O programa deve solicitar a entrada do nome, a largura e o comprimento de um determinado cï¿½modo. Em seguida, deve apresentar a ï¿½rea do cï¿½modo lido e tambï¿½m uma mensagem solicitando do usuï¿½rio a confirmaï¿½ï¿½o de continuar calculando novos cï¿½modos. Caso o usuï¿½rio responda ï¿½NAOï¿½, o programa deve apresentar o valor total acumulado da ï¿½rea residencial.
 // Autor(a)    : Beatriz Chagas
 // Data atual  : 20/09/2024
 
 var
    largura, comprimento, area, areatotal: real
    contador, comodo: caractere
-Inicio
 
 
-      escreval ("------------------------------")
-      escreval (" AREA TOTAL DA RESIDENCIA")
-      escreval ("------------------------------")
+
+      console.log ("------------------------------")
+      console.log (" AREA TOTAL DA RESIDENCIA")
+      console.log ("------------------------------")
       
-      enquanto (contador <> "NAO") faca
-      escreval ("--------------------------------------------------")
-      escreval ("Insira o nome, a largura e o comprimento do comodo: ")
+      while (contador <> "NAO") {
+      console.log ("--------------------------------------------------")
+      console.log ("Insira o nome, a largura e o comprimento do comodo: ")
       leia(comodo, largura, comprimento)
-      area <- largura * comprimento
-      areatotal <- areatotal + area
+      area = largura * comprimento
+      areatotal = areatotal + area
 
-      escreval ("A área total deste comodo é: ", area)
-      escreval ("--------------------------------------------------")
-      escreval ("Gostaria de inserir um novo comodo? : ")
+      console.log ("A ï¿½rea total deste comodo ï¿½: ", area)
+      console.log ("--------------------------------------------------")
+      console.log ("Gostaria de inserir um novo comodo? : ")
       leia(contador)
-   fimenquanto
+   }
 
-   escreval ("A área total desta residência é: ", areatotal)
-   escreval ("--------------------------------------------------")
-Fimalgoritmo
+   console.log ("A ï¿½rea total desta residï¿½ncia ï¿½: ", areatotal)
+   console.log ("--------------------------------------------------")

@@ -1,32 +1,31 @@
 Algoritmo "L03J - pares de 50 a 70"
-// Disciplina  : [Linguagem e Lógica de Programação]
+// Disciplina  : [Linguagem e Lï¿½gica de Programaï¿½ï¿½o]
 // Professor   : Jailson Santos
-// Descrição   : Elaborar um programa que apresente os resultados da soma e da média aritmética dos valores
-// pares situados na faixa numérica de 50 a 70
+// Descriï¿½ï¿½o   : Elaborar um programa que apresente os resultados da soma e da mï¿½dia aritmï¿½tica dos valores
+// pares situados na faixa numï¿½rica de 50 a 70
 // Autor(a)    : Beatriz Chagas
 // Data atual  : 09/09/2024
 
 var
    soma, media, contador: real
-Inicio
 
-   escreval ("------------------------------")
-   escreval ("pares de 50 a 70")
-   escreval ("-----------------------------")
-   contador <- 50
 
-   enquanto contador < 71 faca
+   console.log ("------------------------------")
+   console.log ("pares de 50 a 70")
+   console.log ("-----------------------------")
+   contador = 50
+
+   while contador < 71 {
 
       se contador mod 2 = 0 entao
-         soma <- soma + contador
-         media <- media + 1
+         soma = soma + contador
+         media = media + 1
       fimse
 
-      contador <- contador + 1
-   fimenquanto
+      contador = contador + 1
+   }
 
-   media <- soma / media
-   escreval ("--------------------------------------------------")
-   escreval ("A soma dos numeros pares entre 50 e 70 é: ", soma )
-   escreval ("A media dos numeros pares entre 50 e 70 é: ", media)
-Fimalgoritmo
+   media = soma / media
+   console.log ("--------------------------------------------------")
+   console.log ("A soma dos numeros pares entre 50 e 70 ï¿½: ", soma )
+   console.log ("A media dos numeros pares entre 50 e 70 ï¿½: ", media)
