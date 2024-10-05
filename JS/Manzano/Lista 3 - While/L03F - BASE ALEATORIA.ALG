@@ -1,9 +1,9 @@
 Algoritmo "L03F - BASE ALEATORIA"
-// Disciplina  : [Linguagem e Lógica de Programação]
+// Disciplina  : [Linguagem e Lï¿½gica de Programaï¿½ï¿½o]
 // Professor   : Jailson Santos
-// Descrição   :  Elaborar um programa que apresente como resultado o valor de uma potência de uma base
-// qualquer elevada a um expoente qualquer, ou seja, de BE, em que B é o valor da base e E o valor
-// do expoente. Observe que neste exercício não pode ser utilizado o operador de exponenciação do portuguol (^).
+// Descriï¿½ï¿½o   :  Elaborar um programa que apresente como resultado o valor de uma potï¿½ncia de uma base
+// qualquer elevada a um expoente qualquer, ou seja, de BE, em que B ï¿½ o valor da base e E o valor
+// do expoente. Observe que neste exercï¿½cio nï¿½o pode ser utilizado o operador de exponenciaï¿½ï¿½o do portuguol (^).
 // Autor(a)    : Beatriz Chagas
 // Data atual  : 20/09/2024
 
@@ -13,10 +13,10 @@ var
 Inicio
 
    escreval ("------------------------------")
-   escreval (" BASE ALEATORIA")
+   escreval (" BASE ALEÃTORIA")
    escreval ("------------------------------")
 
-   escreval (" Insira um valor para base e um valor para o exponente da potenciação: ")
+   escreval (" Insira um valor para base e um valor para o exponente da potenciaï¿½ï¿½o: ")
    leia(basequalquer, expoente)
    escreval ("------------------------------")
 
